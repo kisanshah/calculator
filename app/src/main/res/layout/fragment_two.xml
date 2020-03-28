@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/Additional_Operators"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <LinearLayout style="@style/LinearLayout">
+
+            <Button
+                android:id="@+id/Inverse"
+                style="@style/OperatorButton"
+                android:text="Inv" />
+
+            <Button
+                android:id="@+id/Sin"
+                style="@style/OperatorButton"
+                android:text="sin" />
+
+            <Button
+                android:id="@+id/ln"
+                style="@style/OperatorButton"
+                android:text="ln" />
+
+            <Button
+                android:id="@+id/pi"
+                style="@style/OperatorButton"
+                android:text="pi" />
+
+            <Button
+                style="@style/OperatorButton"
+                android:text="(" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/LinearLayout">
+
+            <Button
+                android:id="@+id/Deg"
+                style="@style/OperatorButton"
+                android:text="Deg" />
+
+            <Button
+                android:id="@+id/Cos"
+                style="@style/OperatorButton"
+                android:text="Cos" />
+
+            <Button
+                android:id="@+id/log"
+                style="@style/OperatorButton"
+                android:text="log" />
+
+            <Button
+                android:id="@+id/e"
+                style="@style/OperatorButton"
+                android:text="e" />
+
+            <Button
+                style="@style/OperatorButton"
+                android:text=")" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/LinearLayout">
+
+            <Button
+                style="@style/OperatorButton"
+                android:text="%" />
+
+            <Button
+                android:id="@+id/tan"
+                style="@style/OperatorButton"
+                android:text="sin" />
+
+            <Button
+                android:id="@+id/Sqrt"
+                style="@style/OperatorButton"
+                android:text="Sqrt" />
+
+            <Button
+                android:id="@+id/Sq"
+                style="@style/OperatorButton"
+                android:text="^" />
+
+            <Button
+                android:id="@+id/Factorial"
+                style="@style/OperatorButton"
+                android:text="!" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

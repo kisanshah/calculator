@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/topPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_blue"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/MenuBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/ic_menu"
+            tools:ignore="ContentDescription" />
+
+
+        <TextView
+            android:id="@+id/Result"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/MenuBtn"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="0dp"
+            android:gravity="end"
+            android:paddingEnd="8dp"
+            android:textColor="@color/white"
+            android:textSize="50sp"
+            android:transitionName="Result"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/Equation"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/Result"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="end"
+            android:paddingEnd="8dp"
+            android:textColor="@color/white"
+            android:textSize="35sp"
+            android:transitionName="Equation"
+            tools:ignore="RtlSymmetry" />
+
+
+    </RelativeLayout>
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/topPanel"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorAccent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <LinearLayout
+            android:id="@+id/Buttons"
+            android:layout_width="match_parent"
+            android:layout_height="420dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="0dp"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+
+            <LinearLayout style="@style/LinearLayout">
+
+                <Button
+                    android:id="@+id/OpenBracket"
+                    style="@style/OperatorButton"
+                    android:text="@string/OpeningBrackets" />
+
+                <Button
+                    android:id="@+id/Btn7"
+                    style="@style/NumberButton"
+                    android:text="@string/_7" />
+
+                <Button
+                    android:id="@+id/Btn6"
+                    style="@style/NumberButton"
+                    android:text="@string/_6" />
+
+                <Button
+                    android:id="@+id/Btn3"
+                    style="@style/NumberButton"
+                    android:text="@string/_3" />
+
+                <Button
+                    android:id="@+id/DotBtn"
+                    style="@style/NumberButton"
+                    android:text="@string/Dot" />
+
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/LinearLayout">
+
+                <Button
+                    android:id="@+id/CloseBracket"
+                    style="@style/OperatorButton"
+                    android:text="@string/ClosingBrackets" />
+
+                <Button
+                    android:id="@+id/Btn8"
+                    style="@style/NumberButton"
+                    android:text="@string/_8" />
+
+                <Button
+                    android:id="@+id/Btn5"
+                    style="@style/NumberButton"
+                    android:text="@string/_5" />
+
+                <Button
+                    android:id="@+id/Btn2"
+                    style="@style/NumberButton"
+                    android:text="@string/_2" />
+
+                <Button
+                    android:id="@+id/Btn0"
+                    style="@style/NumberButton"
+                    android:text="@string/_0" />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/LinearLayout">
+
+                <ImageButton
+                    android:id="@+id/CutBtn"
+                    style="@style/OperatorButton"
+                    android:src="@drawable/backspace"
+                    android:text="@string/Mul"
+                    tools:ignore="ContentDescription" />
+
+                <Button
+                    android:id="@+id/Btn9"
+                    style="@style/NumberButton"
+                    android:text="@string/_9" />
+
+
+                <Button
+                    android:id="@+id/Btn4"
+                    style="@style/NumberButton"
+                    android:text="@string/_4" />
+
+                <Button
+                    android:id="@+id/Btn1"
+                    style="@style/NumberButton"
+                    android:text="@string/_1" />
+
+                <Button
+                    android:id="@+id/EqualBtn"
+                    style="@style/NumberButton"
+                    android:text="@string/Equal" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout style="@style/LinearLayout">
+
+
+                <Button
+                    android:id="@+id/DivBtn"
+                    style="@style/OperatorButton"
+                    android:text="@string/_div" />
+
+                <Button
+                    android:id="@+id/MulBtn"
+                    style="@style/OperatorButton"
+                    android:text="@string/Mul" />
+
+                <Button
+                    android:id="@+id/SubBtn"
+                    style="@style/OperatorButton"
+                    android:text="@string/Sub" />
+
+                <Button
+                    android:id="@+id/AddBtn"
+                    style="@style/OperatorButton"
+                    android:text="@string/Add" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <com.google.android.material.navigation.NavigationView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:layout_marginBottom="0dp">
+
+            <LinearLayout
+                android:id="@+id/Additional_Operators"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <LinearLayout style="@style/LinearLayout">
+
+                    <Button
+                        android:id="@+id/Inverse"
+                        style="@style/OperatorButton"
+                        android:text="Inv" />
+
+                    <Button
+                        android:id="@+id/Sin"
+                        style="@style/OperatorButton"
+                        android:text="sin" />
+
+                    <Button
+                        android:id="@+id/ln"
+                        style="@style/OperatorButton"
+                        android:text="ln" />
+
+                    <Button
+                        android:id="@+id/pi"
+                        style="@style/OperatorButton"
+                        android:text="pi" />
+
+                    <Button
+                        style="@style/OperatorButton"
+                        android:text="(" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/LinearLayout">
+
+                    <Button
+                        android:id="@+id/Deg"
+                        style="@style/OperatorButton"
+                        android:text="Deg" />
+
+                    <Button
+                        android:id="@+id/Cos"
+                        style="@style/OperatorButton"
+                        android:text="Cos" />
+
+                    <Button
+                        android:id="@+id/log"
+                        style="@style/OperatorButton"
+                        android:text="log" />
+
+                    <Button
+                        android:id="@+id/e"
+                        style="@style/OperatorButton"
+                        android:text="e" />
+
+                    <Button
+                        style="@style/OperatorButton"
+                        android:text=")" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/LinearLayout">
+
+                    <Button
+                        android:id="@+id/ModBtn"
+                        style="@style/OperatorButton"
+                        android:text="%" />
+
+                    <Button
+                        android:id="@+id/tan"
+                        style="@style/OperatorButton"
+                        android:text="sin" />
+
+                    <Button
+                        android:id="@+id/Sqrt"
+                        style="@style/OperatorButton"
+                        android:text="Sqrt" />
+
+                    <Button
+                        android:id="@+id/Sq"
+                        style="@style/OperatorButton"
+                        android:text="^" />
+
+                    <Button
+                        android:id="@+id/Factorial"
+                        style="@style/OperatorButton"
+                        android:text="!" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.navigation.NavigationView>
+    </androidx.drawerlayout.widget.DrawerLayout>
+</RelativeLayout>
